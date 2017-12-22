@@ -1,8 +1,9 @@
 module.exports = {
-    entry: "./src/index.js",
+    entry: "./public/javascripts/index.js",
     output: {
-        filename: "src/bundle.js"
+        filename: "./public/javascripts/bundle/bundle.js"
     },
+    devtool: 'source-map',
     module: {
         rules: [
             {
@@ -23,9 +24,23 @@ module.exports = {
             },
             {
                 test: /\.svg$/,
-                loader: 'svg-loader'
+                use: [
+                    "babel-loader",
+                    {
+                        loader: "react-svg-loader",
+                        options: {
+                            svgo: {
+                                plugins: [
+                                    { removeTitle: false }
+                                ],
+                                floatPrecision: 2
+                            }
+                        }
+                    }
+                ]
             }
 
         ]
-    }
+    },
+    watch: true
 }
