@@ -18760,7 +18760,7 @@ exports = module.exports = __webpack_require__(14)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-family: sans-serif;\n}\n", ""]);
+exports.push([module.i, "body {\r\n  margin: 0;\r\n  padding: 0;\r\n  font-family: sans-serif;\r\n}\r\n", ""]);
 
 // exports
 
@@ -18913,7 +18913,7 @@ var App = function (_Component) {
           _react2.default.createElement(
             'h1',
             { className: 'App-title' },
-            ' WasfasWelcome to React'
+            'Welcome to React'
           )
         ),
         _react2.default.createElement(
@@ -19010,7 +19010,7 @@ exports = module.exports = __webpack_require__(14)(undefined);
 
 
 // module
-exports.push([module.i, ".App {\n  text-align: center;\n}\n\n.App-logo {\n  -webkit-animation: App-logo-spin infinite 20s linear;\n          animation: App-logo-spin infinite 20s linear;\n  height: 80px;\n}\n\n.App-header {\n  background-color: #222;\n  height: 150px;\n  padding: 20px;\n  color: white;\n}\n\n.App-title {\n  font-size: 1.5em;\n}\n\n.App-intro {\n  font-size: large;\n}\n\n@-webkit-keyframes App-logo-spin {\n  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }\n  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }\n}\n\n@keyframes App-logo-spin {\n  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }\n  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }\n}\n", ""]);
+exports.push([module.i, ".App {\r\n  text-align: center;\r\n}\r\n\r\n.App-logo {\r\n  -webkit-animation: App-logo-spin infinite 20s linear;\r\n          animation: App-logo-spin infinite 20s linear;\r\n  height: 80px;\r\n}\r\n\r\n.App-header {\r\n  background-color: #222;\r\n  height: 150px;\r\n  padding: 20px;\r\n  color: white;\r\n}\r\n\r\n.App-title {\r\n  font-size: 1.5em;\r\n}\r\n\r\n.App-intro {\r\n  font-size: large;\r\n}\r\n\r\n@-webkit-keyframes App-logo-spin {\r\n  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }\r\n  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }\r\n}\r\n\r\n@keyframes App-logo-spin {\r\n  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }\r\n  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }\r\n}\r\n", ""]);
 
 // exports
 
