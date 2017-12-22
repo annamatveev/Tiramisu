@@ -4,7 +4,12 @@ import '../../stylesheets/App.css';
 class Name extends React.Component {
     // ...
     render() {
-        return <div>Hello {this.props.name}!</div>;
+        return (
+            <div>
+                <div>Start: {this.props.start}</div>
+                <div>End: {this.props.end}</div>
+            </div>
+        );
     }
 }
 
