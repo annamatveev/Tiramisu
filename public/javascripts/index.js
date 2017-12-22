@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../stylesheets/index.css';
-import App from './components/App';
+import Name from './components/Name';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Name name={"Anna"}/>, document.getElementById('root'));
