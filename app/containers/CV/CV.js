@@ -26,7 +26,9 @@ class CV extends Component {
         //if (this.props.CV.length === 0 && this.props.loading) {
             return (
                 <MuiThemeProvider>
-                    <Loading loading={this.props.loading}/>
+                    <div id="cv-wrapper">
+                        <Loading loading={this.props.loading}/>
+                    </div>
                 </MuiThemeProvider>
             )
         }
