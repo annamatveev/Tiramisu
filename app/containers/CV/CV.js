@@ -26,7 +26,7 @@ class CV extends Component {
         //if (this.props.CV.length === 0 && this.props.loading) {
             return (
                 <MuiThemeProvider>
-                    <div id="window-wrapper">
+                    <div className="window-wrapper">
                         <Loading loading={this.props.loading}/>
                     </div>
                 </MuiThemeProvider>
@@ -38,7 +38,7 @@ class CV extends Component {
 
         return (
         <MuiThemeProvider>
-            <div id="window-wrapper">
+            <div className="window-wrapper">
                     <NavBar/>
 
                     <DetailsSection
