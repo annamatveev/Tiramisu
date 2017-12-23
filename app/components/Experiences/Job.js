@@ -19,7 +19,8 @@ class Job extends React.Component {
 }
 
 Job.propTypes = {
-    period: PropTypes.element,
+    key: PropTypes.number,
+    period: PropTypes.object,
     title: PropTypes.string,
     location: PropTypes.string,
     description: PropTypes.string
