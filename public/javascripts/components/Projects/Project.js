@@ -5,7 +5,7 @@ class Project extends React.Component {
     render() {
         return (
             <div id={this.props.key}>
-                <h2>Projects List:</h2>
+                <h2>Projects Details:</h2>
                 <div>Project Name: {this.props.title}</div>
                 <div>Project Location: {this.props.location}</div>
                 <div>Project description: {this.props.description}</div>
