@@ -28,8 +28,7 @@ const config = {
         ]
     },
     output: {
-        path: path.resolve(__dirname, '/server/public', 'javascripts'),
-        publicPath: '/server/public',
+        path: path.resolve(__dirname, './server/public/javascripts'),
         filename: 'bundle.js'
     },
     plugins: [

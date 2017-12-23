@@ -9,7 +9,7 @@ class Loading extends Component {
     // ...
     render() {
         return (
-            <div class='loader'>
+            <div className='loader'>
                 <Segment>
                     <Dimmer active inverted>
                         <Loader  size='large' inverted>Loading</Loader>
