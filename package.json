@@ -26,8 +26,8 @@
     "whatwg-fetch": "^2.0.3"
   },
   "scripts": {
-    "build": "webpack",
-    "start": "npm run build | node bin/www/"
+    "build": "webpack | npm start",
+    "start": "node bin/www/"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
