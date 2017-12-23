@@ -1,9 +1,5 @@
 .window-wrapper {
     text-align: center;
-}
-
-.window-wrapper > * {
-    padding-top: 50px;
     height: 100%;
     margin: 0px auto;
     overflow: hidden;
