@@ -41,10 +41,10 @@
   },
   "scripts": {
     "start": "npm run-script dev",
-    "prod": "set NODE_ENV=production| webpack| node bin/www",
-    "dev": "set NODE_ENV=test| webpack | node bin/www",
-    "compile-dev": "set NODE_ENV=dev| webpack",
-    "compile-prod": "set NODE_ENV=production| webpack"
+    "prod": "npm run-script compile-prod | node bin/www",
+    "dev": "npm run-script compile-dev | node bin/www",
+    "compile-dev": "webpack --config webpack.dev.js",
+    "compile-prod": "webpack --config webpack.prod.js"
   },
   "devDependencies": {
     "webpack-bundle-analyzer": "^2.9.1"
