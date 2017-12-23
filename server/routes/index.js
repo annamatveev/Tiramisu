@@ -60,15 +60,31 @@ router.get('/getJsonCV', function(req, res, next) {
         projects: [
             {
                 title: "Social Network Platform",
-                location: "IBM",
-                description: "Did some stuff too"
+                location: "8200 (ISNU), IDF",
+                description: "Was part of developing and managed a team which developed a platform based on elgg " +
+                "opensource using JavaScript, PHP, Node.JS, C# in a microservices architecture over Linux, Apache, " +
+                "MySQL, Express.JS, Windows IIS, MongoDB, Redis, AngularJS and jQuery. "
+            },
+            {
+                title: "Task Management Platform",
+                location: "8200 (ISNU), IDF",
+                description: "Led a team to build from scratch a large-scale task management platform using Node.JS " +
+                "with Express.JS, MongoDB and AngularJS. Managed the team from building the first MVP and to the " +
+                "conversion of all end users using short agile cycles, lean principles and user-oriented approach."
+            },
+            {
+                title: "Management Board Application",
+                location: "8200 (ISNU), IDF",
+                description: "Developed from scratch management board application which integrated with Magen 100 LTD " +
+                "cyber technology solutions using PHP over Laravel, Backbone, RequireJS and MySQL."
             }
         ],
         education: [
             {
                 date: "July 2011",
-                specialty: "B.Sc in Rocket Science",
-                institute: "MIT"
+                specialty: "B.Sc. in Computer Engineering",
+                description:"Specialization in information systems, and in communication and internet systems.",
+                institute: "Hebrew University of Jerusalem"
             }
         ]
     }

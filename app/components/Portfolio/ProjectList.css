@@ -1,0 +1,11 @@
+#portfolio {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+#portfolio h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}

@@ -4,11 +4,12 @@ import { connect } from 'react-redux';
 
 /* Components */
 import EducationList from "../Education/EducationList";
-import ProjectList from "../Projects/ProjectList";
+import ProjectList from "../Portfolio/ProjectList";
 import JobList from "../Experiences/JobList/JobList";
 import Details from '../About/About';
 import Section from '../Section/Section';
 import {fetchDataFromAPI} from "../../actions/CV";
+import { Dimmer, Loader, Image, Segment } from 'semantic-ui-react'
 
 
 import "./CV.css"
@@ -22,7 +23,13 @@ class CV extends React.Component {
 
     render() {
         if (!this.props.CV || this.props.CV === 'undefined') {
-            return "";
+            return (
+                <Segment>
+                    <Dimmer active inverted>
+                        <Loader inverted>Loading</Loader>
+                    </Dimmer>
+                </Segment>
+            )
         }
         const DetailsSection = Section(Details);
         const ProjectSection = Section(ProjectList);

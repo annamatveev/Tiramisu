@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'semantic-ui-react'
+import {Button} from 'semantic-ui-react'
 
 import './About.css';
 
@@ -10,14 +10,14 @@ class Details extends React.Component {
     render() {
         return (
             <div className="regular-font">
-                <img src="/assets/photo.jpg" alt="" />
+                <img src="http://localhost:3000/assets/photo.jpg" alt="" />
+
                 <h1>{this.props.name} </h1>
                 <h2 id="short">{this.props.short} </h2>
                 <article id="description">{this.props.description} </article>
 
                 <Button size='medium' color='teal'>DOWNLOAD CV</Button>
                 <Button size='medium' color='green'>CONTACT ME</Button>
-
             </div>
         );
     }

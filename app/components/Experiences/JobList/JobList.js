@@ -14,7 +14,7 @@ class JobList extends React.Component {
                 <VerticalTimeline>
                     {this.props.items.map((item, index) => (
                         <VerticalTimelineElement
-                            id={index}
+                            key={index}
                             className="vertical-timeline-element--work"
                             date={item.period.start + " - " + item.period.end}
                             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}

@@ -1,27 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Card } from 'semantic-ui-react'
-import './EducationList.css'
+import './ProjectList.css'
 
-class EducationList extends React.Component {
+class Projects extends React.Component {
     // ...
     render() {
-
         const canonizedArray = this.props.items.map((item, index) => {
             return {
                 key: index,
-                header : item.specialty + " @ " + item.institute,
+                header : item.title,
                 description: item.description,
                 meta: item.date
             }
         });
 
         return (
-            <div id="education-list">
-                <h1>Education</h1>
+            <div id="portfolio">
+                <h1>Portfolio</h1>
                 <Card.Group items={canonizedArray}/>
             </div>
         );
     }
 }
 
-export default EducationList;
+export default Projects;
