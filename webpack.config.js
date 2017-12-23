@@ -48,12 +48,12 @@ module.exports = {
         ]
     },
     watch: true,
-    plugins: PROD?
+    plugins:
         [
-             new UglifyJsPlugin({
+            new UglifyJsPlugin({
                 test: /bundle.js($|\?)/i,
                 cache: true
-            })
-        ] : []
+            }),
+        ]
 
 }
