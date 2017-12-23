@@ -1,5 +1,7 @@
 const webpack = require('webpack');
 const PROD = JSON.parse(process.env.PROD_ENV || '0');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+
 
 module.exports = {
     entry: "./app/index.js",
@@ -47,17 +49,11 @@ module.exports = {
     },
     watch: true,
     plugins:
-        PROD ? [
+        [
             new UglifyJsPlugin({
-                uglifyOptions: {
-                    output: {
-                        comments: false,
-                        beautify: false,
-                        ...options
-                    },
-                    warnings: false
-                }
+                test: /bundle.js($|\?)/i,
+                cache: true
             }),
-        ] : []
+        ]
 
 }
