@@ -47808,7 +47808,7 @@ var CV = function (_React$Component) {
     _createClass(CV, [{
         key: 'componentWillMount',
         value: function componentWillMount() {
-            this.props.fetchData('http://localhost:3000/getJsonCV');
+            this.props.fetchData('https://tasty-tiramisu.herokuapp.com/getJsonCV');
         }
     }, {
         key: 'render',
@@ -68879,10 +68879,11 @@ var Details = function (_React$Component) {
 
         // ...
         value: function render() {
+
             return _react2.default.createElement(
                 'div',
                 { className: 'regular-font' },
-                _react2.default.createElement('img', { src: 'http://localhost:3000/assets/photo.jpg', alt: '' }),
+                _react2.default.createElement('img', { src: 'https://tasty-tiramisu.herokuapp.com//assets/photo.jpg', alt: '' }),
                 _react2.default.createElement(
                     'h1',
                     null,

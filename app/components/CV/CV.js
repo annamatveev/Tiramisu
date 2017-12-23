@@ -18,7 +18,7 @@ import NavBar from "../NavBar/NavBar";
 class CV extends React.Component {
 
     componentWillMount() {
-        this.props.fetchData('http://localhost:3000/getJsonCV');
+        this.props.fetchData('https://tasty-tiramisu.herokuapp.com/getJsonCV');
     }
 
     render() {
