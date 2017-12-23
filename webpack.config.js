@@ -28,8 +28,8 @@ const config = {
         ]
     },
     output: {
-        path: path.resolve(__dirname, 'public', 'javascripts'),
-        publicPath: '/public',
+        path: path.resolve(__dirname, '/server/public', 'javascripts'),
+        publicPath: '/server/public',
         filename: 'bundle.js'
     },
     plugins: [
@@ -45,9 +45,8 @@ if (process.env.NODE_ENV === 'production') {
     console.log("Production enviroment detected... minifying bundle")
     config.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                screw_ie8: true
-            }
+            test: /bundle.js($|\?)/i,
+            cache: true
         })
     )
 } else {
