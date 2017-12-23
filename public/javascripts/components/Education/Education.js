@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../../stylesheets/App.css';
 
 class Education extends React.Component {
     // ...
@@ -13,6 +12,12 @@ class Education extends React.Component {
             </div>
         );
     }
+}
+
+Education.propTypes = {
+    date: React.PropTypes.string,
+    specialty: React.PropTypes.string,
+    institute: React.PropTypes.string
 }
 
 export default Education;

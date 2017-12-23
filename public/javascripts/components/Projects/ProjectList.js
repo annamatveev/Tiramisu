@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../../stylesheets/App.css';
 import Project from './Project';
 
 class Projects extends React.Component {

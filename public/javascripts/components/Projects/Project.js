@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../../stylesheets/App.css';
 
 class Project extends React.Component {
     // ...
@@ -13,6 +12,12 @@ class Project extends React.Component {
             </div>
         );
     }
+}
+
+Project.propTypes = {
+    title: React.PropTypes.string,
+    location: React.PropTypes.string,
+    description: React.PropTypes.string
 }
 
 export default Project;

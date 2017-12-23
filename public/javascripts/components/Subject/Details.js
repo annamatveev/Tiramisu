@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../../stylesheets/App.css';
 
 class Details extends React.Component {
     // ...
@@ -15,6 +14,15 @@ class Details extends React.Component {
             </div>
         );
     }
+}
+
+Job.propTypes = {
+    name: React.PropTypes.string,
+    phone: React.PropTypes.string,
+    email: React.PropTypes.string,
+    linkedin: React.PropTypes.string,
+    github: React.PropTypes.string
+
 }
 
 export default Details;

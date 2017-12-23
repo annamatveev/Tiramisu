@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../../stylesheets/App.css';
 import Job from './Job';
 
 class JobList extends React.Component {

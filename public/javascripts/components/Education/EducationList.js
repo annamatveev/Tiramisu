@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../../stylesheets/App.css';
 import Education from './Education';
 
 class EducationList extends React.Component {
