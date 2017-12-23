@@ -1,14 +1,13 @@
-const webpack = require('webpack');
-const PROD = JSON.parse(process.env.PROD_ENV || '0');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const webpack = require('webpack'),
+    path = require('path'),
+    fs = require('fs')
 
+const SRC = path.resolve(__dirname, "src"),
+    NODE_MODULES = path.resolve(__dirname, "node_modules")
 
-module.exports = {
+const config = {
     entry: "./app/index.js",
-    output: {
-        filename: "./server/public/javascripts/bundle.js"
-    },
-    devtool: PROD? 'cheap-module-eval-source-map':'source-map',
+
     module: {
         rules: [
             {
@@ -26,34 +25,32 @@ module.exports = {
                     options: {
                         plugins: () => [require('autoprefixer')]
                     }}]
-            },
-            {
-                test: /\.svg$/,
-                use: [
-                    "babel-loader",
-                    {
-                        loader: "react-svg-loader",
-                        options: {
-                            svgo: {
-                                plugins: [
-                                    { removeTitle: false }
-                                ],
-                                floatPrecision: 2
-                            }
-                        }
-                    }
-                ]
             }
-
         ]
     },
-    watch: true,
-    plugins:
-        [
-            new UglifyJsPlugin({
-                test: /bundle.js($|\?)/i,
-                cache: true
-            }),
-        ]
+    output: {
+        path: path.resolve(__dirname, 'public', 'javascripts'),
+        publicPath: '/public',
+        filename: 'bundle.js'
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+            }
+        }),
+    ]
+};
 
+if (process.env.NODE_ENV === 'production') {
+    config.plugins.push(
+        new webpack.optimize.UglifyJsPlugin()
+    )
+} else {
+    config.devtool = "#cheap-module-source-map"
+    config.plugins.push(
+        new webpack.HotModuleReplacementPlugin()
+    );
 }
+
+module.exports = config

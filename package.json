@@ -39,9 +39,11 @@
     "whatwg-fetch": "^2.0.3"
   },
   "scripts": {
-    "start": "export PROD_ENV=1 | webpack | node bin/www/",
-    "dev": "set PROD_ENV=1 | webpack | node bin/www/",
-    "compile": "set PROD_ENV=1 | webpack"
+    "start": "npm run-script prod",
+    "prod": "set NODE_ENV=production&& webpack&& node bin/www/",
+    "dev": "set NODE_ENV=dev&& webpack&& node bin/www/",
+    "compile-dev": "set PROD_ENV=dev&& webpack",
+    "compile-prod": "set PROD_ENV=production&& webpack"
   },
   "devDependencies": {
     "webpack-bundle-analyzer": "^2.9.1"
