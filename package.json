@@ -40,8 +40,7 @@
     "style-loader": "^0.19.1"
   },
   "scripts": {
-    "build": "webpack | npm start",
-    "start": "node bin/www/"
+    "start": "webpack --watch | npm start"
   },
   "devDependencies": {
 
