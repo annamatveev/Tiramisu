@@ -1,8 +1,18 @@
+body, html {
+    height:  100%;
+    margin:  0px auto;
+    padding: 0px auto;
+}
+
 #window-wrapper {
     text-align: center;
+    height:     auto;       /* These two lines were the key. */
+    min-height: 100%;
+    /*overflow:   hidden;*/ /* Do not use this, it crops in small browsers. */
+    margin:     0px auto;
+    padding:    0px auto;
 }
 
 #window-wrapper > * {
     padding-top: 50px;
-    min-height:1000px;
 }
