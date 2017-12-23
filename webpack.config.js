@@ -53,10 +53,8 @@ if (process.env.NODE_ENV === 'production') {
     )
 } else {
     console.log("Development enviroment detected... Adding source map and hot module replacements")
-    config.devtool = "#cheap-module-source-map"
-    config.plugins.push(
-        new webpack.HotModuleReplacementPlugin()
-    );
+    config.devtool = "#source-map"
+    config.watch = true
 }
 
 module.exports = config
