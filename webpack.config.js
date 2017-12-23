@@ -43,10 +43,16 @@ const config = {
 };
 
 if (process.env.NODE_ENV === 'production') {
+    console.log("Production enviroment detected... minifying bundle")
     config.plugins.push(
-        new webpack.optimize.UglifyJsPlugin({})
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                screw_ie8: true
+            }
+        })
     )
 } else {
+    console.log("Development enviroment detected... Adding source map and hot module replacements")
     config.devtool = "#cheap-module-source-map"
     config.plugins.push(
         new webpack.HotModuleReplacementPlugin()
