@@ -1,4 +1,5 @@
 /* Libs */
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
@@ -29,30 +30,32 @@ class CV extends Component {
         const EducationSection = Section(EducationList);
 
         return (
+        <MuiThemeProvider>
             <div id="cv-wrapper">
-                <NavBar/>
+                    <NavBar/>
 
-                <DetailsSection
-                    id="about"
-                    className="section-wrapper"
-                    name={this.props.CV.name}
-                    description={this.props.CV.description}
-                    {...this.props.CV.contact}
-                />
+                    <DetailsSection
+                        id="about"
+                        className="section-wrapper"
+                        name={this.props.CV.name}
+                        description={this.props.CV.description}
+                        {...this.props.CV.contact}
+                    />
 
-                <JobList
-                    id="experience"
-                    items={this.props.CV.experiences}
-                />
-                <ProjectSection
-                    id="projects"
-                    items={this.props.CV.projects}
-                />
-                <EducationSection
-                    id="education"
-                    items={this.props.CV.education}
-                />
+                    <JobList
+                        id="experience"
+                        items={this.props.CV.experiences}
+                    />
+                    <ProjectSection
+                        id="projects"
+                        items={this.props.CV.projects}
+                    />
+                    <EducationSection
+                        id="education"
+                        items={this.props.CV.education}
+                    />
             </div>
+        </MuiThemeProvider>
         );
     }
 }
