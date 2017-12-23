@@ -4,16 +4,16 @@ import { Dimmer, Loader, Segment } from 'semantic-ui-react'
 import './Loading.css';
 
 class Loading extends Component {
-    constructor() {
-        super();
-        this.setState({ active: true });
+    state = {}
+    componentDidMount() {
+        this.setState()
     }
 
     componentWillUnmount() {
         this.setState({ active: false })
     }
     render() {
-        const { active } = this.state;
+        const { active } = this.state
 
         return (
             <Dimmer.Dimmable as={Segment} blurring dimmed={active}>
