@@ -40,10 +40,10 @@
   },
   "scripts": {
     "start": "npm run-script prod",
-    "prod": "export NODE_ENV=production| webpack | node bin/www",
+    "prod": "set NODE_ENV=production| webpack | node bin/www",
     "dev": "webpack | node bin/www",
-    "compile-dev": "set PROD_ENV=dev| webpack",
-    "compile-prod": "set PROD_ENV=production| webpack"
+    "compile-dev": "set NODE_ENV=dev| webpack",
+    "compile-prod": "set NODE_ENV=production| webpack"
   },
   "devDependencies": {
     "webpack-bundle-analyzer": "^2.9.1"
