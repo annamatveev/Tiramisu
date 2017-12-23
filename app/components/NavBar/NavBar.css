@@ -1,6 +1,6 @@
-#menu-wrapper {
-    display:inline-block;
-    width:50%;
-    padding:10px;
+.menu-wrapper {
+    display: inline-block;
+    width: 50%;
+    padding: 10px;
     margin-bottom: 50px;
 }
