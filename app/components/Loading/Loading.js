@@ -6,7 +6,7 @@ import './Loading.css';
 class Loading extends Component {
     state = {}
     componentDidMount() {
-        this.setState()
+        this.setState({ active: true })
     }
 
     componentWillUnmount() {
