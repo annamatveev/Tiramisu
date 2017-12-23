@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 /* Components */
-import EducationList from "../Education/EducationList";
-import ProjectList from "../Portfolio/ProjectList";
-import JobList from "../Experiences/JobList";
-import Details from '../About/About';
-import Section from '../Section/Section';
+import EducationList from "../../components/Education/EducationList";
+import ProjectList from "../../components/Portfolio/ProjectList";
+import JobList from "../../components/Experiences/JobList";
+import Details from '../../components/About/About';
+import Section from '../../components/Section/Section';
 import {fetchDataFromAPI} from "../../actions/CV";
 
 
@@ -22,8 +22,8 @@ class CV extends Component {
     }
 
     render() {
-        if (!this.props.CV || this.props.CV === 'undefined') {
-            return <Loading />;
+        if (this.props.loading) {
+            return <Loading loading={this.props.loading}/>;
         }
         const DetailsSection = Section(Details);
         const ProjectSection = Section(ProjectList);

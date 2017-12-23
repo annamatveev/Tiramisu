@@ -8,9 +8,7 @@ import React from 'react';
 import configureStore from './store/configureStore.js'
 
 /* Components */
-import CV from './components/CV/CV';
-
-const store = configureStore();
+import CV from './containers/CV/CV';
 
 ReactDOM.render(
     <Provider store={store}>
