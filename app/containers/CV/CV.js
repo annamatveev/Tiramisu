@@ -26,7 +26,7 @@ class CV extends Component {
             return (
                 <MuiThemeProvider>
                     <div className="window-wrapper">
-                        <Loading loading={this.props.loading}/>
+                        <Loading />
                     </div>
                 </MuiThemeProvider>
             )
@@ -52,10 +52,12 @@ class CV extends Component {
                         id="experience"
                         items={this.props.CV.experiences}
                     />
+
                     <ProjectSection
                         id="projects"
                         items={this.props.CV.projects}
                     />
+
                     <EducationSection
                         id="education"
                         items={this.props.CV.education}
