@@ -9,6 +9,7 @@ import configureStore from './store/configureStore.js'
 
 /* Components */
 import CV from './containers/CV/CV';
+const store = configureStore();
 
 ReactDOM.render(
     <Provider store={store}>

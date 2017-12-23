@@ -49,9 +49,9 @@ if (process.env.NODE_ENV === 'production') {
         })
     )
 } else {
-    console.log("Development enviroment detected... Adding source map and hot module replacements")
-    config.devtool = "#source-map"
-    config.watch = true
+    console.log("Development enviroment detected... Adding source map and hot module replacements");
+    config.devtool = "#source-map";
+    config.watch = true;
 }
 
-module.exports = config
+module.exports = configl;
