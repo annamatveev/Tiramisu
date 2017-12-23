@@ -43,8 +43,8 @@
     "start": "npm run-script dev",
     "prod": "npm run-script compile-prod | node bin/www",
     "dev": "npm run-script compile-dev | node bin/www",
-    "compile-dev": "webpack --config webpack.dev.js",
-    "compile-prod": "webpack --config webpack.prod.js"
+    "compile-dev": "webpack --config webpack.dev.config.js",
+    "compile-prod": "webpack --config webpack.prod.config.js"
   },
   "devDependencies": {
     "webpack-bundle-analyzer": "^2.9.1"
