@@ -39,7 +39,7 @@
     "whatwg-fetch": "^2.0.3"
   },
   "scripts": {
-    "start": "heroku config:set PROD_ENV=1 | webpack | node bin/www/",
+    "start": "export PROD_ENV=1 | webpack | node bin/www/",
     "dev": "set PROD_ENV=1 | webpack | node bin/www/",
     "compile": "set PROD_ENV=1 | webpack"
   },
