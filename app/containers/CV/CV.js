@@ -6,14 +6,13 @@ import { connect } from 'react-redux';
 import EducationList from "../../components/Education/EducationList";
 import ProjectList from "../../components/Portfolio/ProjectList";
 import JobList from "../../components/Experiences/JobList";
-import Details from '../../components/About/About';
+import Loading from "../../components/Loading/Loading";
 import Section from '../../components/Section/Section';
+import NavBar from "../../components/NavBar/NavBar";
+import Details from '../../components/About/About';
 import {fetchDataFromAPI} from "../../actions/CV";
 
-
 import "./CV.css"
-import NavBar from "../NavBar/NavBar";
-import Loading from "../Loading/Loading";
 
 class CV extends Component {
 
