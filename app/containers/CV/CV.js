@@ -24,7 +24,11 @@ class CV extends Component {
     render() {
         if (true) {
         //if (this.props.CV.length === 0 && this.props.loading) {
-            return <Loading loading={this.props.loading}/>;
+            return (
+                <MuiThemeProvider>
+                    <Loading loading={this.props.loading}/>
+                </MuiThemeProvider>
+            )
         }
         const DetailsSection = Section(Details);
         const ProjectSection = Section(ProjectList);
