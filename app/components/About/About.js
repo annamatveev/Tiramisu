@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import {Button} from 'semantic-ui-react'
 
 import './About.css';
 
-class Details extends React.Component {
+class Details extends Component {
 
     // ...
     render() {

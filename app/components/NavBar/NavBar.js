@@ -1,9 +1,9 @@
-import React from 'react';
+import { Component } from 'react';
 import { Menu, Sidebar } from 'semantic-ui-react';
 
 import './NavBar.css';
 
-export default class NavBar extends React.Component {
+export default class NavBar extends Component {
 
     state = { activeItem: 'home' }
 

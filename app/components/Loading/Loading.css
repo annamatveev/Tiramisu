@@ -1,0 +1,36 @@
+.regular-font {
+    margin-bottom: 10px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0px;
+    font-size: 35px;
+    line-height: 52px;
+    opacity: 0.7;
+}
+
+h2 {
+    font-size: 18px;
+    line-height: 34px;
+    color: #8a8a8b;
+    margin-bottom: 25px;
+}
+
+article {
+    font-size: 15px;
+    line-height: 27px;
+    opacity: 0.7;
+    padding: 0 90px;
+    margin-bottom: 40px;
+}
+
+img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    vertical-align: middle;
+    margin-top: -70px;
+}

@@ -1,8 +1,8 @@
-import React from 'react';
+import { Component } from 'react';
 import { Card } from 'semantic-ui-react'
 import './EducationList.css'
 
-class EducationList extends React.Component {
+class EducationList extends Component {
     // ...
     render() {
 

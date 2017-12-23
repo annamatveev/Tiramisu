@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { Card } from 'semantic-ui-react'
 import './ProjectList.css'
 
-class Projects extends React.Component {
+class Projects extends Component {
     // ...
     render() {
         const canonizedArray = this.props.items.map((item, index) => {

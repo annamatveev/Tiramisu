@@ -1,19 +1,19 @@
 /* Libs */
-import React from 'react';
+import { Component } from 'react';
 import { connect } from 'react-redux';
 
 /* Components */
 import EducationList from "../Education/EducationList";
 import ProjectList from "../Portfolio/ProjectList";
-import JobList from "../Experiences/JobList/JobList";
+import JobList from "../Experiences/JobList";
 import Details from '../About/About';
 import Section from '../Section/Section';
 import {fetchDataFromAPI} from "../../actions/CV";
-import { Dimmer, Loader, Image, Segment } from 'semantic-ui-react'
 
 
 import "./CV.css"
 import NavBar from "../NavBar/NavBar";
+import Loading from "../Loading/Loading";
 
 class CV extends React.Component {
 
@@ -23,13 +23,7 @@ class CV extends React.Component {
 
     render() {
         if (!this.props.CV || this.props.CV === 'undefined') {
-            return (
-                <Segment>
-                    <Dimmer active inverted>
-                        <Loader inverted>Loading</Loader>
-                    </Dimmer>
-                </Segment>
-            )
+            return <Loading/>;
         }
         const DetailsSection = Section(Details);
         const ProjectSection = Section(ProjectList);

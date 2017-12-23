@@ -1,11 +1,11 @@
-import React from 'react';
+import { Component } from 'react';
 import { VerticalTimeline, VerticalTimelineElement}  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import Icon from 'react-component-bytesize-icons';
 
 import './JobList.css';
 
-class JobList extends React.Component {
+class JobList extends Component {
     // ...
     render() {
         return (
