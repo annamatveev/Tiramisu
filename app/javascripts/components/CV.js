@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../stylesheets/App.css';
 
 import EducationList from "./Education/EducationList";
 import ProjectList from "./Projects/ProjectList";

@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../stylesheets/index.css';
 import CV from './components/CV';
 
 let CV_JSON = {
