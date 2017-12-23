@@ -1,6 +1,5 @@
 const webpack = require('webpack'),
-    path = require('path'),
-    fs = require('fs')
+    path = require('path')
 
 const SRC = path.resolve(__dirname, "src"),
     NODE_MODULES = path.resolve(__dirname, "node_modules")

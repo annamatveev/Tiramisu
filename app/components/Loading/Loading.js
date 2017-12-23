@@ -9,11 +9,13 @@ class Loading extends Component {
     // ...
     render() {
         return (
-            <Segment>
-                <Dimmer active inverted>
-                    <Loader inverted>Loading</Loader>
-                </Dimmer>
-            </Segment>
+            <div class='loader'>
+                <Segment>
+                    <Dimmer active inverted>
+                        <Loader  size='large' inverted>Loading</Loader>
+                    </Dimmer>
+                </Segment>
+            </div>
         )
     }
 }

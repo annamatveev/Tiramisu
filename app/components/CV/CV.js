@@ -23,7 +23,7 @@ class CV extends Component {
 
     render() {
         if (!this.props.CV || this.props.CV === 'undefined') {
-            return <Loading/>;
+            return <Loading />;
         }
         const DetailsSection = Section(Details);
         const ProjectSection = Section(ProjectList);
