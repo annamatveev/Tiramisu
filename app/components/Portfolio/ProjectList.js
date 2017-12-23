@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Card } from 'semantic-ui-react'
 import './ProjectList.css'
 

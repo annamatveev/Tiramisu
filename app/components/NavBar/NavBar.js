@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Menu, Sidebar } from 'semantic-ui-react';
 
 import './NavBar.css';

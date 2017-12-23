@@ -1,5 +1,5 @@
 /* Libs */
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 /* Components */
@@ -15,7 +15,7 @@ import "./CV.css"
 import NavBar from "../NavBar/NavBar";
 import Loading from "../Loading/Loading";
 
-class CV extends React.Component {
+class CV extends Component {
 
     componentWillMount() {
         this.props.fetchData('https://tasty-tiramisu.herokuapp.com/getJsonCV');

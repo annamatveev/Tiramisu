@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Dimmer, Loader, Segment } from 'semantic-ui-react'
 
 
