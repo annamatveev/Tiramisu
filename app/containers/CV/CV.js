@@ -22,7 +22,7 @@ class CV extends Component {
     }
 
     render() {
-        if (this.loading) {
+        if (this.props === [] && this.props.loading) {
             return <Loading loading={this.props.loading}/>;
         }
         const DetailsSection = Section(Details);
