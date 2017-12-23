@@ -23,13 +23,7 @@
     "semantic-ui-react": "^0.77.1",
     "serve-favicon": "~2.4.5",
     "webpack": "^3.10.0",
-    "whatwg-fetch": "^2.0.3"
-  },
-  "scripts": {
-    "build": "webpack | npm start",
-    "start": "node bin/www/"
-  },
-  "devDependencies": {
+    "whatwg-fetch": "^2.0.3",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
@@ -44,5 +38,12 @@
     "postcss-loader": "^2.0.9",
     "react-hot-loader": "^3.1.3",
     "style-loader": "^0.19.1"
+  },
+  "scripts": {
+    "build": "webpack | npm start",
+    "start": "node bin/www/"
+  },
+  "devDependencies": {
+
   }
 }
