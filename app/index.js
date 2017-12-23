@@ -1,4 +1,5 @@
 /* Libs */
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import React from 'react';
@@ -7,13 +8,15 @@ import React from 'react';
 import configureStore from './store/configureStore.js'
 
 /* Components */
-import CV from './components/CV';
+import CV from './components/CV/CV';
 
 const store = configureStore();
 
 ReactDOM.render(
     <Provider store={store}>
-        <CV />
+        <MuiThemeProvider>
+            <CV />
+        </MuiThemeProvider>
     </Provider>,
     document.getElementById('root')
 );

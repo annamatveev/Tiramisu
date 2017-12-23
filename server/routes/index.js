@@ -10,8 +10,10 @@ router.get('/', function(req, res, next) {
 
 router.get('/getJsonCV', function(req, res, next) {
     var CV_JSON = {
-        name: "Anna",
-        description: "This is my description",
+        name: "Anna Matveev",
+        short: "8200 Alumnus, Experienced Web Developer and Ambitious Team Leader",
+        description: "Hello everyone, My name is Anna. I am Web Developer from Israel. " +
+        "I started developing things about 6 years ago.",
         contact: {
             phone: "052235226",
             email: "abra.kadabra@gmail.com",
@@ -20,13 +22,39 @@ router.get('/getJsonCV', function(req, res, next) {
         },
         experiences: [
             {
-                title: "IBM",
+                title: "Team Leader",
                 period: {
-                    start: 'August 2011',
+                    start: 'June 2014',
                     end: 'August 2017'
                 },
-                location: "New York",
-                description: "Did some stuff"
+                location: "8200 (ISNU), IDF",
+                description: "Led a team with 15 developers and QA, managed development cycles under high quality " +
+                "standards, strict time frames and fast SLA, worked in collaboration with multiple teams (UX, DevOps, " +
+                "Security and many more) across the organization, prioritized tasks and features along with the relevant " +
+                "stake holders and product managers, managed operational tasks and customer support to end users. "
+            },
+            {
+                title: "Full-Stack Developer ",
+                period: {
+                    start: 'April 2012',
+                    end: 'June 2014'
+                },
+                location: "8200 (ISNU), IDF",
+                description: "Developed various different features and services in multiple languages - client side and " +
+                "backend services, and worked with numerous open source products such as elgg, MySQL, jQuery and more. " +
+                "Designed and implemented features from scratch and analyzed various scale-related performance problems " +
+                "on the client-side, server-side and databases. Performed DevOps tasks, code maintenance and building " +
+                "operational tools for legacy applications and providing customer support to end users."
+            },
+            {
+                title: "Full-Stack Developer ",
+                period: {
+                    start: 'November 2014',
+                    end: 'August 2015'
+                },
+                location: "Magen 100 LTD",
+                description: "Developed the first user interface for Magen cyber technologies. Designed and implemented " +
+                "the application from scratch and integrated with the relevant information and API from Magen’s services."
             }
         ],
         projects: [

@@ -1,0 +1,8 @@
+.experience {
+    width: 98%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: block;
+    box-sizing: initial;
+    text-align: justify;
+}

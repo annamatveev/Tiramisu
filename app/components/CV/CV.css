@@ -1,0 +1,7 @@
+#cv-wrapper {
+    text-align: center;
+}
+
+#cv-wrapper > * {
+    padding-top: 50px;
+}
