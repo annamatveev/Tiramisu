@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const PROD = JSON.parse(process.env.PROD_ENV || '0');
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     entry: "./app/index.js",
@@ -59,7 +58,6 @@ module.exports = {
                     warnings: false
                 }
             }),
-            new BundleAnalyzerPlugin()
         ] : []
 
 }
