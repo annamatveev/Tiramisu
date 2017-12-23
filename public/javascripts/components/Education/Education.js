@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Education extends React.Component {
     // ...
@@ -15,9 +16,9 @@ class Education extends React.Component {
 }
 
 Education.propTypes = {
-    date: React.PropTypes.string,
-    specialty: React.PropTypes.string,
-    institute: React.PropTypes.string
+    date: PropTypes.string,
+    specialty: PropTypes.string,
+    institute: PropTypes.string
 }
 
 export default Education;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Project extends React.Component {
     // ...
@@ -15,9 +16,9 @@ class Project extends React.Component {
 }
 
 Project.propTypes = {
-    title: React.PropTypes.string,
-    location: React.PropTypes.string,
-    description: React.PropTypes.string
+    title: PropTypes.string,
+    location: PropTypes.string,
+    description: PropTypes.string
 }
 
 export default Project;

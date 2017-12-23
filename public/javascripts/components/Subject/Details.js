@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Details extends React.Component {
     // ...
@@ -16,12 +17,12 @@ class Details extends React.Component {
     }
 }
 
-Job.propTypes = {
-    name: React.PropTypes.string,
-    phone: React.PropTypes.string,
-    email: React.PropTypes.string,
-    linkedin: React.PropTypes.string,
-    github: React.PropTypes.string
+Details.propTypes = {
+    name: PropTypes.string,
+    phone: PropTypes.string,
+    email: PropTypes.string,
+    linkedin: PropTypes.string,
+    github: PropTypes.string
 
 }
 

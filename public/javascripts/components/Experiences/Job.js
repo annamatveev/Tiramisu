@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Period from '../Period'
 
@@ -18,10 +19,10 @@ class Job extends React.Component {
 }
 
 Job.propTypes = {
-    period: React.PropTypes.element,
-    title: React.PropTypes.string,
-    location: React.PropTypes.string,
-    description: React.PropTypes.string
+    period: PropTypes.element,
+    title: PropTypes.string,
+    location: PropTypes.string,
+    description: PropTypes.string
 }
 
 export default Job;
