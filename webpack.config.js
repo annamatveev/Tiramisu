@@ -54,4 +54,4 @@ if (process.env.NODE_ENV === 'production') {
     config.watch = true;
 }
 
-module.exports = configl;
+module.exports = config;
