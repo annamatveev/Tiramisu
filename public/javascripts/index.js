@@ -29,6 +29,13 @@ let CV_JSON = {
             location: "IBM",
             description: "Did some stuff too"
         }
+    ],
+    education: [
+        {
+            date: "July 2011",
+            specialty: "B.Sc in Rocket Science",
+            institute: "MIT"
+        }
     ]
 }
 

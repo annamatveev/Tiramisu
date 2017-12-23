@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../../stylesheets/App.css';
 
+import EducationList from "./Education/EducationList";
 import ProjectList from "./Projects/ProjectList";
 import JobList from "./Experiences/JobList";
 import Details from './Subject/Details';
@@ -17,6 +18,7 @@ class CV extends React.Component {
                 />
                 <JobList items={this.props.experiences}/>
                 <ProjectList items={this.props.projects}/>
+                <EducationList items={this.props.education}/>
             </div>
         );
     }

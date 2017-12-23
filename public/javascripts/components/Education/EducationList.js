@@ -7,7 +7,7 @@ class EducationList extends React.Component {
     render() {
         return (
             <div>
-                <h1>Projects List</h1>
+                <h1>Education List</h1>
                 <ul>
                     {this.props.items.map((item, index) => (
                         <Education
