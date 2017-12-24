@@ -18,16 +18,14 @@ import "./CV.css"
 class CV extends Component {
 
     componentWillMount() {
-        this.props.fetchData('https://tasty-tiramisu.herokuapp.com/getJsonCV');
+        this.props.fetchData('http://localhost:3000/getJsonCV');
     }
 
     render() {
-        if (this.props.CV.length === 0 && this.props.loading) {
+        if (his.props.CV.length === 0 && this.props.loading) {
             return (
                 <MuiThemeProvider>
-                    <div className="window-wrapper">
-                        <Loading />
-                    </div>
+                    <Loading />
                 </MuiThemeProvider>
             )
         }

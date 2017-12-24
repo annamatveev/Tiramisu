@@ -11,7 +11,7 @@ class Details extends Component {
 
         return (
             <div className="regular-font">
-                <img src="https://tasty-tiramisu.herokuapp.com//assets/photo.jpg" alt="" />
+                <img src="http://localhost:3000/assets/photo.jpg" alt="" />
 
                 <h1>{this.props.name} </h1>
                 <h2 id="short">{this.props.short} </h2>

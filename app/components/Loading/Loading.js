@@ -16,8 +16,8 @@ class Loading extends Component {
         const { active } = this.state
 
         return (
-            <Dimmer.Dimmable as={Segment} blurring dimmed={active}>
-                <Dimmer active={active}>
+            <Dimmer.Dimmable as={this.props.Segment} blurring dimmed={active}>
+                <Dimmer page={true} active={active}>
                     <Loader>Loading</Loader>
                 </Dimmer>
             </Dimmer.Dimmable>
