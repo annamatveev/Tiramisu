@@ -6,11 +6,10 @@ import './About.css';
 
 class Details extends Component {
 
-    // ...
     render() {
 
         return (
-            <div className="regular-font">
+            <div className="about">
                 <img src="http://localhost:3000/assets/photo.jpg" alt="" />
 
                 <h1>{this.props.name} </h1>

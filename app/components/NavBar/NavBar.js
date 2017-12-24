@@ -18,43 +18,41 @@ export default class NavBar extends Component {
         const { activeItem } = this.state
 
         return (
-            <nav id="menu-wrapper">
-                <Sidebar as={Menu} animation='push' direction='top' visible={true} width='thin'>
-                    <Menu.Item
-                        name='home'
-                        active={activeItem === 'home'}
-                        content='HOME'
-                        onClick={this.handleItemClick}
-                    />
+            <Sidebar as={Menu} animation='push' direction='top' visible={true} width='thin'>
+                <Menu.Item
+                    name='home'
+                    active={activeItem === 'home'}
+                    content='HOME'
+                    onClick={this.handleItemClick}
+                />
 
-                    <Menu.Item
-                        name='about'
-                        active={activeItem === 'about'}
-                        content='ABOUT'
-                        onClick={this.handleItemClick}
-                    />
+                <Menu.Item
+                    name='about'
+                    active={activeItem === 'about'}
+                    content='ABOUT'
+                    onClick={this.handleItemClick}
+                />
 
-                    <Menu.Item
-                        name='experience'
-                        active={activeItem === 'experience'}
-                        content='EXPERIENCE'
-                        onClick={this.handleItemClick}
-                    />
+                <Menu.Item
+                    name='experience'
+                    active={activeItem === 'experience'}
+                    content='EXPERIENCE'
+                    onClick={this.handleItemClick}
+                />
 
-                    <Menu.Item
-                        name='projects'
-                        active={activeItem === 'projects'}
-                        content='PROJECTS'
-                        onClick={this.handleItemClick}
-                    />
-                    <Menu.Item
-                        name='contact'
-                        active={activeItem === 'contact'}
-                        content='CONTACT'
-                        onClick={this.handleItemClick}
-                    />
-                </Sidebar>
-            </nav>
+                <Menu.Item
+                    name='projects'
+                    active={activeItem === 'projects'}
+                    content='PROJECTS'
+                    onClick={this.handleItemClick}
+                />
+                <Menu.Item
+                    name='contact'
+                    active={activeItem === 'contact'}
+                    content='CONTACT'
+                    onClick={this.handleItemClick}
+                />
+            </Sidebar>
         );
     }
 }
