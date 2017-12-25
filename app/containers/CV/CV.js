@@ -18,7 +18,7 @@ import "./CV.css"
 class CV extends Component {
 
     componentWillMount() {
-        this.props.fetchData('https://tasty-tiramisu.herokuapp.com/getJsonCV');
+        this.props.fetchData('/getJsonCV');
     }
 
     render() {

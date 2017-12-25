@@ -10,13 +10,13 @@ class Details extends Component {
 
         return (
             <div className="about-content">
-                <img src="https://tasty-tiramisu.herokuapp.com/assets/photo.jpg" alt="" />
+                <img src="/assets/photo.jpg" alt="" />
 
                 <h1>{this.props.name} </h1>
                 <h2 id="short">{this.props.short} </h2>
                 <article id="description">{this.props.description} </article>
 
-                <Button size='medium' color='teal'>DOWNLOAD CV</Button>
+                <a href="/assets/AnnaMatveevCV.pdf" download><Button size='medium' color='teal'>DOWNLOAD CV</Button></a>
                 <Button size='medium' color='green'>CONTACT ME</Button>
             </div>
         );

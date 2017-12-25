@@ -1,3 +1,6 @@
+.job-list-content {
+    text-align: center;
+}
 .job-list-content > div {
     /* To fix a bug where text is overlapping */
     width: 98%;
