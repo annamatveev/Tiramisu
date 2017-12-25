@@ -1,6 +1,16 @@
 .window-wrapper {
-    text-align: center;
     margin: 0px auto;
     overflow: hidden;
     padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center
 }
+
+.about-section-wrapper {
+    margin-bottom: 10px;
+    padding-top: 40px;
+    display: inline-block;
+}
+

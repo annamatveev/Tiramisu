@@ -9,7 +9,7 @@ class JobList extends Component {
     // ...
     render() {
         return (
-            <div className="experience">
+            <div className="job-list-content">
                 <h1>Experience</h1>
                 <VerticalTimeline>
                     {this.props.items.map((item, index) => (

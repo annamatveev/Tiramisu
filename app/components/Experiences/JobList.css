@@ -1,12 +1,12 @@
-.experience > div {
+.job-list-content > div {
+    /* To fix a bug where text is overlapping */
     width: 98%;
     max-width: 1170px;
     margin: 0 auto;
     display: block;
     box-sizing: initial;
-    text-align: justify;
 }
 
-.experience h1 {
+.job-list-content h1 {
     margin-bottom: 10px;
 }

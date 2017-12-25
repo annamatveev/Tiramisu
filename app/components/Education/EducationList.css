@@ -1,11 +1,8 @@
-#education-list {
-    display: inline-block;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: left;
+.education-list-content {
+    text-align: center;
 }
 
-#education-list h1 {
-    text-align: center;
+.education-list-content > h1 {
     margin-bottom: 20px;
+
 }

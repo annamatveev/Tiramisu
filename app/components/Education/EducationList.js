@@ -16,9 +16,9 @@ class EducationList extends Component {
         });
 
         return (
-            <div id="education-list">
+            <div className="education-list-content">
                 <h1>Education</h1>
-                <Card.Group items={canonizedArray}/>
+                <Card.Group items={canonizedArray} className={"centered"}/>
             </div>
         );
     }

@@ -1,11 +1,8 @@
-#portfolio {
-    display: inline-block;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: left;
+.portfolio-content {
+    text-align: center;
 }
 
-#portfolio h1 {
-    text-align: center;
+.portfolio-content h1 {
+
     margin-bottom: 20px;
 }

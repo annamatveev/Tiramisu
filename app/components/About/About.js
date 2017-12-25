@@ -9,8 +9,8 @@ class Details extends Component {
     render() {
 
         return (
-            <div className="about">
-                <img src="https://tasty-tiramisu.herokuapp.com/assets/photo.jpg" alt="" />
+            <div className="about-content">
+                <img src="http://localhost:3000/assets/photo.jpg" alt="" />
 
                 <h1>{this.props.name} </h1>
                 <h2 id="short">{this.props.short} </h2>

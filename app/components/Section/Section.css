@@ -1,7 +1,33 @@
 section {
+    /* Font Issues */
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+
     width: 70%;
     display: inline-block;
     margin-bottom: 30px;
+    padding: 40px;
+}
+
+section > .segnment > div {
+
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 52px;
+    opacity: 0.7;
+    margin: 0;
+}
+
+h2 {
+    font-size: 18px;
+    line-height: 34px;
+    color: rgba(0,0,0,.68);
+    margin-bottom: 25px;
+}
+
+section > p {
+    opacity: 0.7;
 }

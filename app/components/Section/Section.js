@@ -7,7 +7,7 @@ const Section = WrappedComponent => class extends Component {
 
     render() {
         return (
-            <section id={this.props.id}>
+            <section className={this.props.id + "-section-wrapper"}>
                 <Segment raised>
                     <WrappedComponent {...this.props}/>
                 </Segment>

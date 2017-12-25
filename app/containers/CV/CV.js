@@ -18,7 +18,7 @@ import "./CV.css"
 class CV extends Component {
 
     componentWillMount() {
-        this.props.fetchData('https://tasty-tiramisu.herokuapp.com/getJsonCV');
+        this.props.fetchData('http://localhost:3000/getJsonCV');
     }
 
     render() {
@@ -40,16 +40,16 @@ class CV extends Component {
 
                     <DetailsSection
                         id="about"
-                        className="section-wrapper"
                         name={this.props.CV.name}
                         description={this.props.CV.description}
                         {...this.props.CV.contact}
                     />
 
-                    <JobList
-                        id="experience"
-                        items={this.props.CV.experiences}
-                    />
+                    <div id="job-list-wrapper">
+                        <JobList
+                            items={this.props.CV.experiences}
+                        />
+                    </div>
 
                     <ProjectSection
                         id="projects"

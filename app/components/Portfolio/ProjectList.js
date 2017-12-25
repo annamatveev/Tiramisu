@@ -15,9 +15,9 @@ class Projects extends Component {
         });
 
         return (
-            <div id="portfolio">
+            <div className="portfolio-content">
                 <h1>Portfolio</h1>
-                <Card.Group items={canonizedArray}/>
+                <Card.Group items={canonizedArray} className={"centered"}/>
             </div>
         );
     }
