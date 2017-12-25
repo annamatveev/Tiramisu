@@ -8,7 +8,7 @@ module.exports = {
     output: {
         filename: "./server/public/javascripts/bundle.js"
     },
-    devtool: PROD? 'cheap-module-eval-source-map',
+    devtool: 'cheap-module-eval-source-map',
     module: {
         rules: [
             {
