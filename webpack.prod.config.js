@@ -46,13 +46,10 @@ module.exports = {
             }
 
         ]
-    }
+    },
     plugins:
         [
-            new UglifyJsPlugin({
-                test: /bundle.js($|\?)/i,
-                cache: true
-            }),
+            new UglifyJsPlugin(),
         ]
 
 }
