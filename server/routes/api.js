@@ -3,7 +3,7 @@ var path = require('path');
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET home page in prod. */
 router.get('/', function(req, res, next) {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 });

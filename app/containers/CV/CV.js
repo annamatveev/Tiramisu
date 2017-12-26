@@ -18,7 +18,7 @@ import "./CV.css"
 class CV extends Component {
 
     componentDidMount() {
-        this.props.fetchData('/getJsonCV');
+        this.props.fetchData('/api/getJsonCV');
     }
 
     render() {

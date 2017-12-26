@@ -2,11 +2,12 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: [
-        'webpack-hot-middleware/client',
+        'webpack-hot-middleware/client?reload=true',
         "./app/index.js"
         ],
     output: {
-        filename: "./server/public/javascripts/bundle.js",
+        filename: "bundle.js",
+        path: __dirname + '/server/public',
         publicPath: "/"
     },
     devtool: '#source-map',
@@ -30,7 +31,6 @@ module.exports = {
             }
         ]
     },
-    watch: true,
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin()
