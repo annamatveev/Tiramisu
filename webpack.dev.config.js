@@ -1,5 +1,11 @@
+var webpack = require('webpack');
+var webpack = require('webpack');
+
 module.exports = {
-    entry: "./app/index.js",
+    entry: [
+        'webpack-hot-middleware/client',
+        "./app/index.js"
+        ],
     output: {
         filename: "./server/public/javascripts/bundle.js"
     },
@@ -42,5 +48,9 @@ module.exports = {
 
         ]
     },
-    watch: true
+    watch: true,
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoEmitOnErrorsPlugin()
+    ]
 }
