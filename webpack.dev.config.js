@@ -1,5 +1,4 @@
 var webpack = require('webpack');
-var webpack = require('webpack');
 
 module.exports = {
     entry: [
@@ -9,7 +8,7 @@ module.exports = {
     output: {
         filename: "./server/public/javascripts/bundle.js"
     },
-    devtool: 'source-map',
+    devtool: '#source-map',
     module: {
         rules: [
             {
@@ -27,25 +26,7 @@ module.exports = {
                     options: {
                         plugins: () => [require('autoprefixer')]
                     }}]
-            },
-            {
-                test: /\.svg$/,
-                use: [
-                    "babel-loader",
-                    {
-                        loader: "react-svg-loader",
-                        options: {
-                            svgo: {
-                                plugins: [
-                                    { removeTitle: false }
-                                ],
-                                floatPrecision: 2
-                            }
-                        }
-                    }
-                ]
             }
-
         ]
     },
     watch: true,
