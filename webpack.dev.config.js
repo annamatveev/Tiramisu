@@ -2,6 +2,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: [
+        'babel-polyfill',
         'webpack-hot-middleware/client?reload=true',
         "./app/index.js"
         ],

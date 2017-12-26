@@ -11,14 +11,14 @@ import Loading from "../../components/Loading/Loading";
 import Section from '../../components/Section/Section';
 import NavBar from "../../components/NavBar/NavBar";
 import Details from '../../components/About/About';
-import {fetchDataFromAPI} from "../../actions/CV";
+import { fetchCVJSONDetails } from "../../actions/CV";
 
 import "./CV.css"
 
 class CV extends Component {
 
     componentDidMount() {
-        this.props.fetchData('/api/getJsonCV');
+        this.props.fetchCVJSONDetails();
     }
 
     render() {
@@ -76,7 +76,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        fetchData: (url) => dispatch(fetchDataFromAPI(url))
+        fetchCVJSONDetails: () => dispatch(fetchCVJSONDetails())
     };
 };
 

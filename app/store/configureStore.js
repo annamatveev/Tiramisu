@@ -1,11 +1,17 @@
 import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga'
 import CVReducer from '../reducers/CVReducer'
+import { fetchCVJSONDetails } from '../containers/CV/saga'
 
 export default function configureStore(initialState) {
-    return createStore(
+    const sagaMiddleware = createSagaMiddleware();
+    const store = createStore(
         CVReducer,
         initialState,
-        applyMiddleware(thunk)
+        applyMiddleware(sagaMiddleware)
     );
+
+    store.runSaga = sagaMiddleware.run(fetchCVJSONDetails);
+
+    return store;
 }
