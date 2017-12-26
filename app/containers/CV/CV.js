@@ -1,83 +1,50 @@
-/* Libs */
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
-/* Components */
-import EducationList from "../../components/Education/EducationList";
-import ProjectList from "../../components/Portfolio/ProjectList";
 import JobList from "../../components/Experiences/JobList";
-import Loading from "../../components/Loading/Loading";
-import Section from '../../components/Section/Section';
 import NavBar from "../../components/NavBar/NavBar";
 import Details from '../../components/About/About';
-import { fetchCVJSONDetails } from "../../actions/CV";
+import EducationList from "../../components/Education/EducationList";
+import ProjectList from "../../components/Portfolio/ProjectList";
+import Section from '../../components/Section/Section';
 
+/* Styles */
 import "./CV.css"
 
 class CV extends Component {
-
-    componentDidMount() {
-        this.props.fetchCVJSONDetails();
-    }
-
     render() {
-        if (this.props.CV.length === 0 && this.props.loading) {
-            return (
-                <MuiThemeProvider>
-                    <Loading />
-                </MuiThemeProvider>
-            )
-        }
         const DetailsSection = Section(Details);
         const ProjectSection = Section(ProjectList);
         const EducationSection = Section(EducationList);
 
         return (
-            <MuiThemeProvider>
-                <div className="window-wrapper">
-                    <NavBar/>
+            <div className="window-wrapper">
+                <NavBar />
 
-                    <DetailsSection
-                        id="about"
-                        name={this.props.CV.name}
-                        description={this.props.CV.description}
-                        {...this.props.CV.contact}
-                    />
+                <DetailsSection
+                    id="aboutttt"
+                    name={this.props.name}
+                    description={this.props.description}
+                    {...this.props.contact}
+                />
 
-                    <div id="job-list-wrapper">
-                        <JobList
-                            items={this.props.CV.experiences}
-                        />
-                    </div>
-
-                    <ProjectSection
-                        id="projects"
-                        items={this.props.CV.projects}
-                    />
-
-                    <EducationSection
-                        id="education"
-                        items={this.props.CV.education}
+                <div id="job-list-wrapper">
+                    <JobList
+                        items={this.props.experiences}
                     />
                 </div>
-            </MuiThemeProvider>
+
+                <ProjectSection
+                    id="projects"
+                    items={this.props.projects}
+                />
+
+                <EducationSection
+                    id="education"
+                    items={this.props.education}
+                />
+            </div>
         );
     }
 }
 
-
-const mapStateToProps = (state) => {
-    return {
-        CV: state.CV,
-        loading: state.loading
-    };Y
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        fetchCVJSONDetails: () => dispatch(fetchCVJSONDetails())
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(CV);
+export default CV;

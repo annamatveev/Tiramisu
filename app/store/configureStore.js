@@ -11,7 +11,7 @@ export default function configureStore(initialState) {
         applyMiddleware(sagaMiddleware)
     );
 
-    store.runSaga = sagaMiddleware.run(fetchCVJSONDetails);
+    sagaMiddleware.run(fetchCVJSONDetails);
 
     return store;
 }
