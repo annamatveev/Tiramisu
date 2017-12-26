@@ -22,20 +22,14 @@ class CV extends Component {
     }
 
     render() {
-        if (this.props.CV.length === 0 && this.props.loading) {
-            return (
-                <MuiThemeProvider>
-                    <Loading />
-                </MuiThemeProvider>
-            )
-        }
+
         const DetailsSection = Section(Details);
         const ProjectSection = Section(ProjectList);
         const EducationSection = Section(EducationList);
 
         return (
-        <MuiThemeProvider>
-            <div className="window-wrapper">
+            <MuiThemeProvider>
+                <div className="window-wrapper">
                     <NavBar/>
 
                     <DetailsSection
@@ -60,8 +54,8 @@ class CV extends Component {
                         id="education"
                         items={this.props.CV.education}
                     />
-            </div>
-        </MuiThemeProvider>
+                </div>
+            </MuiThemeProvider>
         );
     }
 }
@@ -71,7 +65,7 @@ const mapStateToProps = (state) => {
     return {
         CV: state.CV,
         loading: state.loading
-    };
+    };Y
 };
 
 const mapDispatchToProps = (dispatch) => {
