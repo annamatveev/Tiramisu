@@ -11,7 +11,6 @@ class Details extends Component {
         return (
             <div className="about-content">
                 <img src="/assets/photo.jpg" alt="" />
-
                 <h1>{this.props.name} </h1>
                 <h2 id="short">{this.props.short} </h2>
                 <article id="description">{this.props.description} </article>
