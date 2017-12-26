@@ -22,7 +22,13 @@ class CV extends Component {
     }
 
     render() {
-
+        if (this.props.CV.length === 0 && this.props.loading) {
+            return (
+                <MuiThemeProvider>
+                    <Loading/>
+                </MuiThemeProvider>
+            )
+        }
         const DetailsSection = Section(Details);
         const ProjectSection = Section(ProjectList);
         const EducationSection = Section(EducationList);
