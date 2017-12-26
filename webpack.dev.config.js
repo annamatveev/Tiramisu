@@ -1,4 +1,4 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
     entry: [
@@ -6,7 +6,8 @@ module.exports = {
         "./app/index.js"
         ],
     output: {
-        filename: "./server/public/javascripts/bundle.js"
+        filename: "./server/public/javascripts/bundle.js",
+        publicPath: "/"
     },
     devtool: '#source-map',
     module: {

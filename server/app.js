@@ -4,19 +4,17 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-// HMR
-var webpack = require('webpack');
-var webpackConfig = require('../webpack.dev.config');
-
 var app = express();
 
-if (process.env.NODE_ENV === 'dev') {
-
-    var compiler = webpack(webpackConfig);
-    app.use(require("webpack-hot-middleware")(compiler));
-}
-
 var index = require('./routes/index');
+
+const isProd = process.env.NODE_ENV === 'production';
+
+if (!isProd) {
+    const webpackConfig = require('../webpack.dev.config');
+    const addDevMiddlewares = require('./middleware/devMiddleware');
+    addDevMiddlewares(app, webpackConfig);
+}
 
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
