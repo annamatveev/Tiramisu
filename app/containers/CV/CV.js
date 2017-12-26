@@ -25,7 +25,7 @@ class CV extends Component {
         if (this.props.CV.length === 0 && this.props.loading) {
             return (
                 <MuiThemeProvider>
-                    <Loading/>
+                    <Loading />
                 </MuiThemeProvider>
             )
         }
