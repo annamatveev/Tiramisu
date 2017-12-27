@@ -19,7 +19,6 @@ app.use('/api', api);
 
 const staticFilesPath = path.join(__dirname, 'public');
 
-app.use(express.static(staticFilesPath));
 setup(app, {
     outputPath: staticFilesPath,
     publicPath: '/',
