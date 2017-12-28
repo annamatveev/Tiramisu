@@ -47,7 +47,7 @@
   },
   "scripts": {
     "start": "npm run-script prod",
-    "prod": "cross-env NODE_ENV=production | npm run-script compile-prod | node bin/www",
+    "prod": "npm run-script compile-prod | cross-env NODE_ENV=production node bin/www",
     "dev": "npm run-script compile-dev | node bin/www",
     "compile-dev": "webpack --config webpack.dev.config.js",
     "compile-prod": "webpack --config webpack.prod.config.js"
