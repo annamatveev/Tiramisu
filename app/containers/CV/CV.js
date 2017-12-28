@@ -19,9 +19,8 @@ class CV extends Component {
         return (
             <div className="window-wrapper">
                 <NavBar />
-
                 <DetailsSection
-                    id="aboutttt"
+                    id="about"
                     name={this.props.name}
                     description={this.props.description}
                     {...this.props.contact}
