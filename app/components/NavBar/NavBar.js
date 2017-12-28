@@ -56,7 +56,7 @@ export default class NavBar extends Component {
                     />
                 </Link>
 
-                <Link to={'#contact-section-wrapper'}>
+                <Link to={'#education-section-wrapper'}>
                     <Menu.Item
                         name='education'
                         active={activeItem === 'education'}
