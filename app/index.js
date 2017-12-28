@@ -21,14 +21,12 @@ history.listen((location, action) => {
 function hashLinkScroll() {
     const { hash } = window.location;
     if (hash !== '') {
-        setTimeout(function() {
-            const id = hash.replace('#', '');
-            const element = document.getElementById(id);
-            if (element) {
-                element.scrollIntoView();
-                window.scrollBy(0, -50);
-            }
-        }, 0);
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView();
+            window.scrollBy(0, -50);
+        }
     }
 }
 
