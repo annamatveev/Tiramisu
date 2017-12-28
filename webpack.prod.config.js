@@ -1,5 +1,6 @@
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
     entry: [
@@ -7,7 +8,8 @@ module.exports = {
         "./app/index.js"
         ],
     output: {
-        filename: "./server/public/bundle.js"
+        path: path.resolve(process.cwd(), 'server/public'),
+        filename: "bundle.js",
     },
     devtool: 'source-map',
     module: {
