@@ -8,13 +8,6 @@ export default class NavBar extends Component {
 
     state = { activeItem: 'home' }
 
-    handleItemClick = (e, { name }) => {
-        this.setState({ activeItem: name })
-        // Assuming section id's are the same as menu items' names
-        let element = document.getElementById(name);
-        element.scrollIntoView();
-    }
-
     render() {
         const { activeItem } = this.state
 
@@ -26,7 +19,6 @@ export default class NavBar extends Component {
                         name='home'
                         active={activeItem === 'home'}
                         content='HOME'
-                        onClick={this.handleItemClick}
                     />
                 </Link>
 
@@ -35,7 +27,6 @@ export default class NavBar extends Component {
                         name='about'
                         active={activeItem === 'about'}
                         content='ABOUT'
-                        onClick={this.handleItemClick}
                     />
                 </Link>
 
@@ -52,7 +43,6 @@ export default class NavBar extends Component {
                         name='projects'
                         active={activeItem === 'projects'}
                         content='PROJECTS'
-                        onClick={this.handleItemClick}
                     />
                 </Link>
 
@@ -61,7 +51,6 @@ export default class NavBar extends Component {
                         name='education'
                         active={activeItem === 'education'}
                         content='EDUCATION'
-                        onClick={this.handleItemClick}
                     />
                 </Link>
             </Sidebar>
