@@ -1,58 +1,66 @@
 import React, { Component } from 'react';
 import { Menu, Sidebar } from 'semantic-ui-react';
-import { Link }  from 'react-router-dom';
+import { NavLink }  from 'react-router-dom';
 
 import './NavBar.css';
 
 export default class NavBar extends Component {
 
-    state = { activeItem: 'home' }
+
+    state = { activeItem: 'home' };
+
+    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
     render() {
-        const { activeItem } = this.state
+        const { activeItem } = this.state;
 
         return (
 
             <Sidebar as={Menu} animation='push' direction='top' visible={true} width='thin'>
-                <Link to={'#root'}>
+                <NavLink  to={'#root'}>
                     <Menu.Item
                         name='home'
                         active={activeItem === 'home'}
                         content='HOME'
+                        onClick={this.handleItemClick}
                     />
-                </Link>
+                </NavLink >
 
-                <Link to={'#about-section-wrapper'}>
+                <NavLink  to={'#about-section-wrapper'}>
                     <Menu.Item
                         name='about'
                         active={activeItem === 'about'}
                         content='ABOUT'
+                        onClick={this.handleItemClick}
                     />
-                </Link>
+                </NavLink >
 
-                <Link to={'#job-list-wrapper'}>
+                <NavLink  to={'#job-list-wrapper'}>
                     <Menu.Item
-                        name='job-list-wrapper'
+                        name='experience'
                         active={activeItem === 'experience'}
                         content='EXPERIENCE'
+                        onClick={this.handleItemClick}
                     />
-                </Link>
+                </NavLink >
 
-                <Link to={'#projects-section-wrapper'}>
+                <NavLink  to={'#projects-section-wrapper'}>
                     <Menu.Item
                         name='projects'
                         active={activeItem === 'projects'}
                         content='PROJECTS'
+                        onClick={this.handleItemClick}
                     />
-                </Link>
+                </NavLink >
 
-                <Link to={'#education-section-wrapper'}>
+                <NavLink   to={'#education-section-wrapper'}>
                     <Menu.Item
                         name='education'
                         active={activeItem === 'education'}
                         content='EDUCATION'
+                        onClick={this.handleItemClick}
                     />
-                </Link>
+                </NavLink  >
             </Sidebar>
         );
     }

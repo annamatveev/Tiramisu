@@ -1,4 +1,4 @@
-function hashLinkScroll() {
+export default function hashLinkScroll() {
     const { hash } = window.location;
     if (hash !== '') {
         const id = hash.replace('#', '');
