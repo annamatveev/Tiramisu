@@ -12,23 +12,12 @@ import createHistory from 'history/createBrowserHistory'
 import configureStore from './store/configureStore.js'
 import App from './containers/App/App'
 const store = configureStore({CV:[], loading: true});
+import hashLinkScroll from './utils/navigation'
 
 const history = createHistory()
 history.listen((location, action) => {
     hashLinkScroll();
 });
-
-function hashLinkScroll() {
-    const { hash } = window.location;
-    if (hash !== '') {
-        const id = hash.replace('#', '');
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView();
-            window.scrollBy(0, -50);
-        }
-    }
-}
 
 ReactDOM.render(
     <Provider store={store}>
