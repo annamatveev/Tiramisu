@@ -8,10 +8,9 @@ import { Router } from 'react-router'
 import createHistory from 'history/createBrowserHistory'
 
 /* Modules */
-
 import configureStore from './store/configureStore.js'
 import App from './containers/App/App'
-const store = configureStore({CV:[], loading: true});
+const store = configureStore({form: {}, CV: { info:[], loading: true }});
 import hashLinkScroll from './utils/navigation'
 
 const history = createHistory()

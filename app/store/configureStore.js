@@ -1,14 +1,18 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga'
 import CVReducer from '../reducers/CVReducer'
-import { fetchCVJSONDetails } from '../containers/CV/saga'
+import { fetchCVJSONDetails } from '../containers/App/saga'
+import { reducer as formReducer } from 'redux-form'
 
 export default function configureStore(initialState) {
     const sagaMiddleware = createSagaMiddleware();
     const store = createStore(
-        CVReducer,
-        initialState,
-        applyMiddleware(sagaMiddleware)
+      combineReducers({
+        form: formReducer,
+        CV: CVReducer,
+      }),
+      initialState,
+      applyMiddleware(sagaMiddleware)
     );
 
     sagaMiddleware.run(fetchCVJSONDetails);

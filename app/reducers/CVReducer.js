@@ -3,7 +3,7 @@ export default function CVReducers(state = [], action) {
         case 'FETCH_REQUEST':
             return  {...state, loading: true};
         case 'FETCH_SUCCESS':
-            return {...state, CV: action.payload, loading: false};
+            return {...state, info: action.payload, loading: false};
         case 'FETCH_ERROR':
             return  {...state, loading: false};
         default:

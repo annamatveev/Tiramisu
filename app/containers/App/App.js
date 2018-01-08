@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 /* Components */
 import Loading from "../../components/Loading/Loading";
-import CV from "../CV/CV";
+import CV from "../../components/CV/CV";
 
 /* Modules */
 import { fetchCVJSONDetails } from "../../actions/CV";
@@ -23,7 +23,7 @@ class App extends Component {
         }
         else {
             return (
-                <CV {...this.props.CV}/>
+                <CV {...this.props.info}/>
             );
         }
     }
@@ -31,8 +31,8 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        CV: state.CV,
-        loading: state.loading
+        info: state.CV.info,
+        loading: state.CV.loading
     };
 };
 
